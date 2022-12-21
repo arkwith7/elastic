@@ -1,9 +1,13 @@
+#elasticsearch 제외 디렉토리 및 파일
 elasticsearch-7.10.1/bin/
+elasticsearch-7.10.1/data/
 elasticsearch-7.10.1/jdk/
 elasticsearch-7.10.1/lib/
 elasticsearch-7.10.1/logs/
 elasticsearch-7.10.1/modules/
 elasticsearch-7.10.1/plugins/
+elasticsearch.keystore
+
 
 filebeat-7.10.1-windows-x86_64/kibana/
 filebeat-7.10.1-windows-x86_64/module/

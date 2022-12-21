@@ -1,0 +1,89 @@
+[2022-12-21T15:12:50,571][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.10.1", "jruby.version"=>"jruby 9.2.13.0 (2.5.7) 2020-08-03 9a89c94bcc Java HotSpot(TM) 64-Bit Server VM 25.351-b10 on 1.8.0_351-b10 +indy +jit [mswin32-x86_64]"}
+[2022-12-21T15:12:50,670][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/data/queue"}
+[2022-12-21T15:12:50,681][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.dead_letter_queue", :path=>"D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/data/dead_letter_queue"}
+[2022-12-21T15:12:50,740][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2022-12-21T15:12:50,763][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"3c1cb005-9e63-44df-a1eb-e2b1ad481167", :path=>"D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/data/uuid"}
+[2022-12-21T15:12:51,879][INFO ][org.reflections.Reflections] Reflections took 24 ms to scan 1 urls, producing 23 keys and 47 values 
+[2022-12-21T15:12:52,485][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2022-12-21T15:12:52,594][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2022-12-21T15:12:52,652][INFO ][logstash.outputs.elasticsearch][main] ES Output version determined {:es_version=>7}
+[2022-12-21T15:12:52,655][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2022-12-21T15:12:52,705][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["http://localhost:9200"]}
+[2022-12-21T15:12:52,754][INFO ][logstash.outputs.elasticsearch][main] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2022-12-21T15:12:52,791][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>20, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>2500, "pipeline.sources"=>["D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/config/logstash-tmdb.conf"], :thread=>"#<Thread:0x2697a777 run>"}
+[2022-12-21T15:12:52,822][INFO ][logstash.outputs.elasticsearch][main] Attempting to install template {:manage_template=>{"index_patterns"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s", "number_of_shards"=>1}, "mappings"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}
+[2022-12-21T15:12:52,845][INFO ][logstash.outputs.elasticsearch][main] Installing elasticsearch template to _template/logstash
+[2022-12-21T15:12:53,330][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.53}
+[2022-12-21T15:12:53,347][INFO ][logstash.inputs.beats    ][main] Beats inputs: Starting input listener {:address=>"0.0.0.0:5044"}
+[2022-12-21T15:12:53,361][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2022-12-21T15:12:53,421][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2022-12-21T15:12:53,451][INFO ][org.logstash.beats.Server][main][4ae3b1a499f91ab800577de4685957f874e912f81e57724ba7fbd07487389b94] Starting server on port: 5044
+[2022-12-21T15:12:53,623][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2022-12-21T15:21:46,789][WARN ][logstash.runner          ] SIGINT received. Shutting down.
+[2022-12-21T15:21:51,812][WARN ][logstash.runner          ] Received shutdown signal, but pipeline is still waiting for in-flight events
+to be processed. Sending another ^C will force quit Logstash, but this may cause
+data loss.
+[2022-12-21T15:21:53,798][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2022-12-21T15:21:54,115][INFO ][logstash.runner          ] Logstash shut down.
+[2022-12-21T15:23:27,684][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.10.1", "jruby.version"=>"jruby 9.2.13.0 (2.5.7) 2020-08-03 9a89c94bcc Java HotSpot(TM) 64-Bit Server VM 25.351-b10 on 1.8.0_351-b10 +indy +jit [mswin32-x86_64]"}
+[2022-12-21T15:23:27,844][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2022-12-21T15:23:29,058][INFO ][org.reflections.Reflections] Reflections took 20 ms to scan 1 urls, producing 23 keys and 47 values 
+[2022-12-21T15:23:30,818][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>20, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>2500, "pipeline.sources"=>["D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/config/logstash-tmdb.conf"], :thread=>"#<Thread:0x7c70e23c run>"}
+[2022-12-21T15:23:31,335][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.51}
+[2022-12-21T15:23:31,663][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2022-12-21T15:23:31,705][INFO ][filewatch.observingtail  ][main][041829e369a0f529a2040f4ef0d4410b10057d5511c0e1ffc02cd79e1fd1c6cb] START, creating Discoverer, Watch with file and sincedb collections
+[2022-12-21T15:23:31,711][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2022-12-21T15:23:31,907][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2022-12-21T15:26:05,970][WARN ][logstash.runner          ] SIGINT received. Shutting down.
+[2022-12-21T15:26:06,024][INFO ][filewatch.observingtail  ] QUIT - closing all files and shutting down.
+[2022-12-21T15:26:06,985][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2022-12-21T15:26:07,095][INFO ][logstash.runner          ] Logstash shut down.
+[2022-12-21T15:26:26,467][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.10.1", "jruby.version"=>"jruby 9.2.13.0 (2.5.7) 2020-08-03 9a89c94bcc Java HotSpot(TM) 64-Bit Server VM 25.351-b10 on 1.8.0_351-b10 +indy +jit [mswin32-x86_64]"}
+[2022-12-21T15:26:26,616][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2022-12-21T15:26:27,857][INFO ][org.reflections.Reflections] Reflections took 19 ms to scan 1 urls, producing 23 keys and 47 values 
+[2022-12-21T15:26:29,558][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>20, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>2500, "pipeline.sources"=>["D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/config/logstash-tmdb.conf"], :thread=>"#<Thread:0x57ab5c89 run>"}
+[2022-12-21T15:26:30,100][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.53}
+[2022-12-21T15:26:30,379][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2022-12-21T15:26:30,420][INFO ][filewatch.observingtail  ][main][f710a20a23858f57c017510a7f30b27d1d867422bb3e9116cf97d5014401712e] START, creating Discoverer, Watch with file and sincedb collections
+[2022-12-21T15:26:30,422][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2022-12-21T15:26:30,622][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2022-12-21T15:27:55,582][WARN ][logstash.runner          ] SIGINT received. Shutting down.
+[2022-12-21T15:27:55,640][INFO ][filewatch.observingtail  ] QUIT - closing all files and shutting down.
+[2022-12-21T15:27:55,884][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2022-12-21T15:27:56,742][INFO ][logstash.runner          ] Logstash shut down.
+[2022-12-21T15:28:27,403][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.10.1", "jruby.version"=>"jruby 9.2.13.0 (2.5.7) 2020-08-03 9a89c94bcc Java HotSpot(TM) 64-Bit Server VM 25.351-b10 on 1.8.0_351-b10 +indy +jit [mswin32-x86_64]"}
+[2022-12-21T15:28:27,566][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2022-12-21T15:28:28,805][INFO ][org.reflections.Reflections] Reflections took 19 ms to scan 1 urls, producing 23 keys and 47 values 
+[2022-12-21T15:28:30,597][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>20, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>2500, "pipeline.sources"=>["D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/config/logstash-tmdb.conf"], :thread=>"#<Thread:0x2b9eacdf run>"}
+[2022-12-21T15:28:31,134][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.53}
+[2022-12-21T15:28:31,423][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2022-12-21T15:28:31,466][INFO ][filewatch.observingtail  ][main][b504b05d40032539a9ec2e9ddc6e65ed55a6cacafb15f2cb4e3af351981316f4] START, creating Discoverer, Watch with file and sincedb collections
+[2022-12-21T15:28:31,479][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2022-12-21T15:28:31,690][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2022-12-21T15:28:32,535][ERROR][logstash.filters.ruby    ][main][1c8b847a0c6d33610e6390a0c2c023fe666caa0860c75e314b00214a58793ed7] Ruby exception occurred: unexpected token at 'genres'
+[2022-12-21T15:38:02,999][WARN ][logstash.runner          ] SIGINT received. Shutting down.
+[2022-12-21T15:38:03,059][INFO ][filewatch.observingtail  ] QUIT - closing all files and shutting down.
+[2022-12-21T15:38:04,137][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2022-12-21T15:38:05,212][INFO ][logstash.runner          ] Logstash shut down.
+[2022-12-21T15:38:36,360][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.10.1", "jruby.version"=>"jruby 9.2.13.0 (2.5.7) 2020-08-03 9a89c94bcc Java HotSpot(TM) 64-Bit Server VM 25.351-b10 on 1.8.0_351-b10 +indy +jit [mswin32-x86_64]"}
+[2022-12-21T15:38:36,521][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2022-12-21T15:38:37,772][INFO ][org.reflections.Reflections] Reflections took 21 ms to scan 1 urls, producing 23 keys and 47 values 
+[2022-12-21T15:38:38,506][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://127.0.0.1:9200/]}}
+[2022-12-21T15:38:38,611][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2022-12-21T15:38:38,644][INFO ][logstash.outputs.elasticsearch][main] ES Output version determined {:es_version=>7}
+[2022-12-21T15:38:38,647][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2022-12-21T15:38:38,690][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//127.0.0.1"]}
+[2022-12-21T15:38:38,730][INFO ][logstash.outputs.elasticsearch][main] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2022-12-21T15:38:38,778][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>20, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>2500, "pipeline.sources"=>["D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/config/logstash-tmdb.conf"], :thread=>"#<Thread:0x5a93273d run>"}
+[2022-12-21T15:38:38,785][INFO ][logstash.outputs.elasticsearch][main] Attempting to install template {:manage_template=>{"index_patterns"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s", "number_of_shards"=>1}, "mappings"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}
+[2022-12-21T15:38:39,334][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.55}
+[2022-12-21T15:38:39,634][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2022-12-21T15:38:39,691][INFO ][filewatch.observingtail  ][main][dbc9650dd2fe5fce417b083bc6fedfcd800abd058a80eb54e6775890565afe69] START, creating Discoverer, Watch with file and sincedb collections
+[2022-12-21T15:38:39,696][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2022-12-21T15:38:39,878][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2022-12-21T15:38:40,694][ERROR][logstash.filters.ruby    ][main][9d51ca9c2d9103e63deb5a1978e641baacf6953d6a9c28574750aeeff9f46f4c] Ruby exception occurred: unexpected token at 'genres'
+[2022-12-21T15:38:41,235][WARN ][logstash.outputs.elasticsearch][main][be42045f9c2e59b697c246b1062eadaf4437595bb2bc665a8272b494710b8be5] Could not index event to Elasticsearch. {:status=>400, :action=>["index", {:_id=>nil, :_index=>"tmdb_5000_movie2", :routing=>nil, :_type=>"_doc"}, #<LogStash::Event:0x5e881283>], :response=>{"index"=>{"_index"=>"tmdb_5000_movie2", "_type"=>"_doc", "_id"=>"1kJnM4UB02fw7z2E1YSN", "status"=>400, "error"=>{"type"=>"mapper_parsing_exception", "reason"=>"failed to parse field [runtime] of type [long] in document with id '1kJnM4UB02fw7z2E1YSN'. Preview of field's value: 'runtime'", "caused_by"=>{"type"=>"illegal_argument_exception", "reason"=>"For input string: \"runtime\""}}}}}
+[2022-12-21T15:43:35,417][WARN ][logstash.runner          ] SIGINT received. Shutting down.
+[2022-12-21T15:43:35,475][INFO ][filewatch.observingtail  ] QUIT - closing all files and shutting down.
+[2022-12-21T15:43:36,896][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2022-12-21T15:43:37,575][INFO ][logstash.runner          ] Logstash shut down.
