@@ -87,3 +87,24 @@ data loss.
 [2022-12-21T15:43:35,475][INFO ][filewatch.observingtail  ] QUIT - closing all files and shutting down.
 [2022-12-21T15:43:36,896][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
 [2022-12-21T15:43:37,575][INFO ][logstash.runner          ] Logstash shut down.
+[2022-12-21T15:43:55,868][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.10.1", "jruby.version"=>"jruby 9.2.13.0 (2.5.7) 2020-08-03 9a89c94bcc Java HotSpot(TM) 64-Bit Server VM 25.351-b10 on 1.8.0_351-b10 +indy +jit [mswin32-x86_64]"}
+[2022-12-21T15:43:56,021][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2022-12-21T15:43:57,250][INFO ][org.reflections.Reflections] Reflections took 19 ms to scan 1 urls, producing 23 keys and 47 values 
+[2022-12-21T15:43:58,013][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://127.0.0.1:9200/]}}
+[2022-12-21T15:43:58,123][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://127.0.0.1:9200/"}
+[2022-12-21T15:43:58,156][INFO ][logstash.outputs.elasticsearch][main] ES Output version determined {:es_version=>7}
+[2022-12-21T15:43:58,159][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2022-12-21T15:43:58,203][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//127.0.0.1"]}
+[2022-12-21T15:43:58,245][INFO ][logstash.outputs.elasticsearch][main] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2022-12-21T15:43:58,290][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>20, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>2500, "pipeline.sources"=>["D:/Pilot_PJT/90.ELK_Stack/elastic/logstash-7.10.1/config/logstash-tmdb.conf"], :thread=>"#<Thread:0x65fd0e9 run>"}
+[2022-12-21T15:43:58,299][INFO ][logstash.outputs.elasticsearch][main] Attempting to install template {:manage_template=>{"index_patterns"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s", "number_of_shards"=>1}, "mappings"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}
+[2022-12-21T15:43:58,879][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.58}
+[2022-12-21T15:43:59,154][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2022-12-21T15:43:59,212][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2022-12-21T15:43:59,213][INFO ][filewatch.observingtail  ][main][5e094da4fc2e85f06e254151b2cd847e8759d180c4907b64b9f9bedc5b508a6d] START, creating Discoverer, Watch with file and sincedb collections
+[2022-12-21T15:43:59,389][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2022-12-21T15:44:00,266][ERROR][logstash.filters.ruby    ][main][1ec6481d0ca04b9ac2cff9fcd6d1997491baa6e8ec0c9cc4cefdcc073391444e] Ruby exception occurred: unexpected token at 'genres'
+[2022-12-21T18:49:26,583][WARN ][logstash.runner          ] SIGINT received. Shutting down.
+[2022-12-21T18:49:26,667][INFO ][filewatch.observingtail  ] QUIT - closing all files and shutting down.
+[2022-12-21T18:49:28,065][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2022-12-21T18:49:28,762][INFO ][logstash.runner          ] Logstash shut down.
