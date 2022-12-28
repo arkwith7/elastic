@@ -24,6 +24,7 @@ logstash-7.10.1/bin/
 logstash-7.10.1/data/
 logstash-7.10.1/jdk/
 logstash-7.10.1/lib/
+logstash-7.10.1/logs/
 logstash-7.10.1/logstash-core/
 logstash-7.10.1/logstash-core-plugin-api/
 logstash-7.10.1/modules/
